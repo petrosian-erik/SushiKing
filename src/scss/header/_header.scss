@@ -35,11 +35,13 @@
       order: 2;
     }
     &.mobile-none {
-      height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: all $easing 0.5s;
-      padding: 0;
+      @include sm-block() {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all $easing 0.5s;
+        padding: 0;
+      }
       @include sm-block() {
         .header-top_languages {
           order: 1;
