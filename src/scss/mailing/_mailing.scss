@@ -1,0 +1,64 @@
+.mailing {
+  background-image: url("../img/mailing-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include xs-block() {
+    display: none;
+  }
+  .container {
+    @include xl-block() {
+      padding-left: 60px;
+    }
+    @include l-block() {
+      padding-left: 20px;
+    }
+  }
+  &-title {
+    max-width: 740px;
+    h2 {
+      font-family: $oswald;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 56px;
+      line-height: 120%;
+      color: $white;
+      @include sm-block() {
+        font-size: 36px;
+        max-width: 470px;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+  }
+  &-form {
+    @include sm-block() {
+      justify-content: center;
+    }
+    input[type=email] {
+      font-family: $sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 100%;
+      padding: 15px 20px;
+      border-radius: 5px;
+      width: 340px;
+      box-sizing: border-box;
+      border: 1px solid $white;
+      &::placeholder {
+        color: $gray;
+      }
+    }
+    button {
+      color: $white;
+      cursor: pointer;
+      padding: 15px 20px;
+      border-radius: 5px;
+      font-family: $sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 110%;
+    }
+  }
+}

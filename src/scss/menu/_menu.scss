@@ -1,0 +1,85 @@
+.menu{
+  &-catalog {
+    &_item {
+      width: calc(100% / 4 - 15px);
+      max-height: 402px;
+      background-color: $white;
+      border: 1px solid $c-border;
+      box-sizing: border-box;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      margin: 20px 10px 0;
+      transition: all $easing;
+      &:hover {
+        border: 1px solid $accent;
+        .catalog-item_name {
+          background-color: $accent;
+          h3 {
+            color: $white;
+          }
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:nth-child(-n+4) {
+        margin-top: 0;
+        @include l-block() {
+          margin-top: 20px;
+        }
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+        @include l-block() {
+          margin-right: 10px;
+        }
+      }
+      &:nth-child(4n+5) {
+        margin-left: 0;
+        @include l-block() {
+          margin-left: 10px;
+        }
+      }
+      @include l-block() {
+        width: calc(100% / 3 - 15px);
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+        &:nth-child(3n+4) {
+          margin-left: 0;
+        }
+      }
+      @include xs-block() {
+        width: calc(100% / 2 - 10px);
+        margin: 20px 0 0;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        &:nth-child(4n+5) {
+          margin-left: 0;
+        }
+        &:nth-child(-n+2) {
+          margin-top: 0;
+        }
+        &:nth-child(2n) {
+          margin-left: 20px;
+        }
+      }
+      .catalog-item {
+        &_img {
+          max-width: 340px;
+          padding: 20px;
+          border-bottom: 1px solid $c-border;
+        }
+        h3 {
+          font-family: $sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+}

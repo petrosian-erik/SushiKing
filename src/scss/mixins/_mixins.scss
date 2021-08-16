@@ -1,0 +1,126 @@
+$columns: 12;
+
+$break_xxl: 1920px;
+$break_xl: 1460px;
+$break_l: 1000px;
+$break_m: 991px;
+$break_sm: 768px;
+$break_s: 575px;
+$break_xs: 480px;
+$break_xxs: 375px;
+
+
+@mixin xxl($name, $value){
+    @media screen and (max-width: $break_xxl){
+        #{$name}: $value;
+    }
+}
+
+@mixin xxl-block(){
+    @media screen and (max-width: $break_xxl){
+        @content;
+    }
+}
+
+@mixin xl($name, $value){
+    @media screen and (max-width: $break_xl){
+        #{$name}: $value;
+    }
+}
+
+@mixin xl-block(){
+    @media screen and (max-width: $break_xl){
+        @content;
+    }
+}
+
+@mixin l($name, $value){
+    @media screen and (max-width: $break_l){
+        #{$name}: $value;
+    }
+}
+
+@mixin l-block(){
+    @media screen and (max-width: $break_l){
+        @content;
+    }
+}
+
+@mixin m($name, $value){
+    @media screen and (max-width: $break_m){
+        #{$name}: $value;
+    }
+}
+
+@mixin m-block(){
+    @media screen and (max-width: $break_m){
+        @content;
+    }
+}
+
+@mixin sm($name, $value){
+    @media screen and (max-width: $break_sm){
+        #{$name}: $value;
+    }
+}
+
+@mixin sm-block(){
+    @media screen and (max-width: $break_sm){
+        @content;
+    }
+}
+
+@mixin s($name, $value){
+    @media screen and (max-width: $break_s){
+        #{$name}: $value;
+    }
+}
+
+@mixin s-block(){
+    @media screen and (max-width: $break_s){
+        @content;
+    }
+}
+
+@mixin xs($name, $value){
+    @media screen and (max-width: $break_xs){
+        #{$name}: $value;
+    }
+}
+
+@mixin xs-block(){
+    @media screen and (max-width: $break_xs){
+        @content;
+    }
+}
+
+@mixin xxs($name, $value){
+    @media screen and (max-width: $break_xxs){
+        #{$name}: $value;
+    }
+}
+
+@mixin xxs-block(){
+    @media screen and (max-width: $break_xxs){
+        @content;
+    }
+}
+
+@mixin from($min_width){
+    @media screen and (min-width: $min_width){
+        @content;
+    }
+}
+
+@mixin to($max_width){
+    @media screen and (max-width: $max_width){
+        @content;
+    }
+}
+
+@mixin from-to($min_width, $max_width){
+    @media screen and (min-width: $min_width) and (max-width: $max_width){
+        @content;
+    }
+}
+

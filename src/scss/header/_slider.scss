@@ -1,0 +1,78 @@
+.header-slider {
+  color: $white;
+  position: relative;
+  @include sm-block() {
+    order: 3;
+    width: 100%;
+  }
+  .container {
+    @include xl-block() {
+      padding-left: 66px;
+    }
+    @include l-block() {
+      padding-left: 20px;
+    }
+    @include xs-block() {
+      text-align: center;
+    }
+  }
+  .swiper-slide {
+    height: auto;
+  }
+  .slide-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &_btn {
+    position: relative;
+    a {
+      display: inline-block;
+      font-family: $sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 110%;
+    }
+  }
+  &_subtitle {
+    position: relative;
+    font-family: $sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 100%;
+  }
+  h2 {
+    position: relative;
+    font-family: $oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 120%;
+    max-width: 800px;
+    @include sm-block() {
+      font-size: 36px;
+    }
+  }
+  .header-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    z-index: 2;
+    transform: translateX(-50%);
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      border: 2px solid $accent;
+      background-color: transparent;
+      opacity: 1;
+      &.swiper-pagination-bullet-active {
+        border: 2px solid $white;
+        background-color: $accent;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "fonts";
+@import "mixins/mixins";
+@import "~normalize.css";
+@import "vars";
+
+// Tailwind
+@import '../icomoon/style.css';
+@import "./tailwind/compiled.css";
+
+//Swiper
+@import 'swiper/swiper-bundle.css';
+
+@import "base";
+
+//Header
+@import "header/header";
+@import "header/slider";
+
+//Menu
+@import "menu/menu";
+
+//Banner
+@import "banner/banner";
+
+//Delivery
+@import "delivery/delivery";
+
+//News
+@import "news/news";
+
+//Mailing
+@import "mailing/mailing";
+
+//Terms
+@import "terms/terms";
+
+//Footer
+@import "footer/footer";

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sushi King</title>
+</head>
+<body class="bg-body subpixel-antialiased">
+  <header class="header">
+    <div class="header-top mobile-none py-3">
+      <div class="container flex flex-wrap items-center justify-between">
+        <div class="header-top_languages flex">
+          <div class="icon-lang rounded-full w-8">
+            <img class="rounded-full" src="./img/icon/lang-est.png" alt="">
+          </div>
+          <div class="icon-lang rounded-full w-8 ml-2 active">
+            <img class="rounded-full" src="./img/icon/lang-rus.png" alt="">
+          </div>
+        </div>
+        <div class="header-top_hours hidden lg:flex">
+          <i class="icon-clock"></i>
+          <p class="ml-2">Пн-Пт : 11-21 / Сб-Вс : 11-22</p>
+        </div>
+        <div class="header-top_email flex">
+          <i class="icon-email"></i>
+          <a class="ml-2" href="mailto:tartu@sushiking.ee">tartu@sushiking.ee</a>
+        </div>
+        <div class="header-top_phone flex">
+          <i class="icon-phone"></i>
+          <a class="ml-2" href="tel:+37255543030">+372 5554 3030</a>
+        </div>
+        <div class="header-top_city flex items-center justify-end">
+          <i class="icon-city"></i>
+          <p class="ml-2">Город:</p>
+          <div class="select-city ml-2 relative">
+            <div class="city-backdrop hidden" data-type="backdrop"></div>
+            <div class="select-city_name flex pl-4 pr-6 py-2">
+              <p class="name">Пярну</p>
+              <i class="icon-triangle"></i>
+            </div>
+            <div class="select-city_options w-full hidden">
+              <div class="city_option p-3" data-city="Москва">Москва</div>
+              <div class="city_option p-3" data-city="Санкт-Петербург">Санкт-Петербург</div>
+              <div class="city_option p-3" data-city="Пярну">Пярну</div>
+            </div>
+          </div>
+        </div>
+        <div class="burger-menu block lg:hidden bg-accent">
+          <i class="icon-burger"></i>
+          <i class="icon-close"></i>
+        </div>
+        <div class="mobile-menu none">
+          <div class="mobile-menu_hours flex">
+            <i class="icon-clock"></i>
+            <p class="ml-2">Пн-Пт : 11-21 / Сб-Вс : 11-22</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav py-3">
+      <div class="container flex items-center justify-between">
+        <div class="header-logo w-36 lg:w-52">
+          <a href="#">
+            <img src="./img/logo.svg" alt="">
+          </a>
+        </div>
+        <ul class="nav flex items-center">
+          <li class="nav-menu">
+            <a href="#">Меню <i class="icon-triangle ml-2"></i></a>
+            <ul class="submenu">
+              <li><a href="#">Poke Bowl</a></li>
+              <li><a href="#">Темпура Маки</a></li>
+              <li><a href="#">Закуски</a></li>
+              <li><a href="#">Салаты / Супы</a></li>
+              <li><a href="#">Сашими</a></li>
+              <li><a href="#">Нигири суши (2шт)</a></li>
+              <li><a href="#">Monin</a></li>
+              <li><a href="#">Маки (8шт)</a></li>
+              <li><a href="#">Добавки</a></li>
+              <li><a href="#">Детское</a></li>
+              <li><a href="#">Запеченые маки</a></li>
+              <li><a href="#">Напитки</a></li>
+              <li><a href="#">Hoso маки (8шт)</a></li>
+              <li><a href="#">Gurmee</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li>
+            <a href="#">О нас <i class="icon-triangle ml-2"></i></a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+        <div class="header-top_phone flex">
+          <i class="icon-phone"></i>
+          <a class="ml-2" href="tel:+37255543030">+372 5554 3030</a>
+        </div>
+        <div class="header-btn flex">
+          <div class="header-btn_login hidden lg:block">
+            <a href="#" class="py-4 px-3 border border-accent rounded-md text-accent"><i class="icon-user mr-2"></i> Войти</a>
+          </div>
+          <div class="header-btn_cart ml-2">
+            <a href="#" class="bg-primary border border-primary py-4 px-3 text-white rounded-md"><i class="icon-cart mr-2"></i> 23€</a>
+          </div>
+          <div class="icon-btn">
+            <i class="icon-burger"></i>
+            <i class="icon-close"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-container header-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-img">
+            <img src="./img/slider1.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="header-slider_subtitle bg-accent inline-block p-1.5 mt-28 xl:mt-48">
+              <p>АКЦИЯ на День Рождения</p>
+            </div>
+            <div class="header-slider_title mt-5">
+              <h2>Абсолютно бесплатные суши</h2>
+            </div>
+            <div class="header-slider_btn mt-20 mb-28 xl:mb-44">
+              <a href="#" class="bg-primary py-5 px-8 rounded-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-img">
+            <img src="./img/slider1.jpg" alt="">
+          </div>
+          <div class="container">
+            <div class="header-slider_subtitle bg-accent inline-block p-1.5 mx-3 mt-28 xl:mt-48">
+              <p>АКЦИЯ на День Рождения</p>
+            </div>
+            <div class="header-slider_title mt-5 px-3">
+              <h2>Абсолютно бесплатные суши 22222</h2>
+            </div>
+            <div class="header-slider_btn mt-20 px-3 mb-28 xl:mb-44">
+              <a href="#" class="bg-primary py-5 px-8 rounded-lg">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-pagination container"></div>
+    </div>
+  </header>
+  <div class="menu py-20">
+    <div class="container">
+      <div class="menu-title base-title flex items-end mb-10">
+        <h2>Меню</h2>
+        <a href="#" class="ml-auto">Открыть каталог</a>
+      </div>
+      <div class="menu-catalog flex flex-wrap">
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/wok.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>WOK</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/poke-bowl.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Poke Bowl</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/темпура-маки.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Темпура Маки</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/закуски.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Закуски</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/салаты-супы.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Салаты / Супы</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/сашими.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Сашими</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/нигири-суши.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Нигири суши (2шт)</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/monin.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Monin</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/маки.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Маки (8шт)</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/добавки.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Добавки</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/детское.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Детское</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/запеченые-маки.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Запеченые маки</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/напитка.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Напитки</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/hoso-маки.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Hoso маки (8шт)</h3>
+          </div>
+        </div>
+        <div class="menu-catalog_item">
+          <div class="catalog-item_img">
+            <img src="./img/menu/gurmee.png" alt="">
+          </div>
+          <div class="catalog-item_name py-5 text-center">
+            <h3>Gurmee</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner pt-28 pb-20">
+    <div class="container">
+      <div class="banner-code w-64">
+        <div class="qr-code w-full h-64">
+          <img src="./img/banner/qr.svg" alt="">
+        </div>
+        <div class="banner-btn mt-2.5 flex">
+          <a href="#">
+            <img src="./img/banner/google-play.svg" alt="">
+            <div class="text ml-2">
+              <i class="icon-get"></i>
+              <i class="icon-google-text"></i>
+            </div>
+          </a>
+          <a href="#">
+            <i class="icon-apple"></i>
+            <div class="text ml-2">
+              <i class="icon-download"></i>
+              <i class="icon-store"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="banner-subtitle bg-accent inline-block mt-20 mb-5">
+        <p>SushiKing - теперь и на смартфоне</p>
+      </div>
+      <div class="banner-title">
+        <h3>Заказывай удобнее и дешевле</h3>
+      </div>
+    </div>
+    <div class="banner-phone hidden lg:block">
+      <img src="./img/banner/banner-phone.png" alt="">
+    </div>
+  </div>
+  <div class="delivery py-28">
+    <div class="container">
+      <div class="delivery-title base-title flex items-end mb-20">
+        <h2>Доставка</h2>
+        <a href="#" class="ml-auto">Подробнее</a>
+      </div>
+      <div class="delivery-block flex flex-wrap items-center">
+        <div class="delivery-block_img w-1/2 px-20">
+          <img src="./img/delivery-bg.png" alt="">
+        </div>
+        <div class="delivery-block_content w-1/2">
+          <h3 class="mb-5">Мы доставляем только свежие продукты</h3>
+          <div class="lables mb-10">
+            <span class="lable">Быстро</span>
+            <span class="lable">Аккуратно</span>
+            <span class="lable">По городу - БЕСПЛАТНО</span>
+          </div>
+          <p>Мы доставим ваш заказ в любое место в пределах Вашего города в течении 30-60 минут, в зависимости от сложности заказа и загруженности кухни.</p>
+          <p>Стоимость доставки 3 евро!</p>
+          <p>При заказе в прилегающие к Вашему городу районы, свяжитесь с нашим оператором, чтобы уточнить время доставки.</p>
+          <span>В комплект входит:</span>
+          <ul>
+            <li>Бамбуковые палочки</li>
+            <li>Бесплатный комплект соевого соуса, имбиря и васаби</li>
+            <li>Салфетки</li>
+          </ul>
+          <p>NB! Если при заказе через сайт или приложение вы самостоятельно не добавите желаемое количество сои, имбиря или васаби, то не зависимо от размера заказа вы получите только один бесплатный комплект.</p>
+          <p>NB! Вы также можете забрать свой заказ самостоятельно. Наша кухня находится по адресу ... </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="news pb-20">
+    <div class="container">
+      <div class="news-title base-title flex items-end mb-10">
+        <h2>Новости</h2>
+        <a href="#" class="ml-auto">Смотреть все</a>
+      </div>
+      <div class="news-post flex">
+        <a href="#" class="news-post_item">
+          <div class="news-post_img">
+            <img src="./img/news/post1.jpg" alt="">
+          </div>
+          <div class="news-post_title">
+            <h4>Подарите вкус своей жизни!</h4>
+          </div>
+        </a>
+        <a href="#" class="news-post_item">
+          <div class="news-post_img">
+            <img src="./img/news/post2.jpg" alt="">
+          </div>
+          <div class="news-post_title">
+            <h4>Встречайте нечто интересное!</h4>
+          </div>
+        </a>
+        <a href="#" class="news-post_item">
+          <div class="news-post_img">
+            <img src="./img/news/post3.jpg" alt="">
+          </div>
+          <div class="news-post_title">
+            <h4>Новые принципы комплектации заказов и заголовок в две строки</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mailing py-20">
+    <div class="container">
+      <div class="mailing-title mb-14">
+        <h2>Подпишитесь на нашу рассылку что бы быть в курсе новинок и выгодных предложений!</h2>
+      </div>
+      <form class="mailing-form flex">
+        <input type="email" placeholder="Ваш emal" required>
+        <button type="submit" class="bg-primary ml-5">Подписаться</button>
+      </form>
+    </div>
+  </div>
+  <div class="terms py-28">
+    <div class="container">
+      <div class="terms-title base-title mb-10">
+        <h2>Условия</h2>
+      </div>
+      <div class="terms-block flex flex-row">
+        <ul class="tabs">
+          <li class="tabs-item active" data-link="tab1">Заказ</li>
+          <li class="tabs-item" data-link="tab2">Доставка</li>
+          <li class="tabs-item" data-link="tab3">Оплата</li>
+          <li class="tabs-item" data-link="tab4">Акции</li>
+        </ul>
+        <div class="tabs-item_content" id="tab1">
+          <h3>Заказ</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+        </div>
+        <div class="tabs-item_content hidden" id="tab2">
+          <h3>Условия доставки</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+        </div>
+        <div class="tabs-item_content hidden" id="tab3">
+          <h3>Оплата</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+        </div>
+        <div class="tabs-item_content hidden" id="tab4">
+          <h3>Акции</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra sapien integer neque auctor nec enim enim. Egestas leo fringilla non quam malesuada ac:</p>
+          <ul>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+            <li>Fames leo mi iaculis sed adipiscing placerat.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container flex flex-row flex-wrap">
+      <div class="py-10 pr-32 footer-logo footer-col">
+        <a href="#" class="w-60 block">
+          <img src="./img/logo.svg" alt="">
+        </a>
+        <p class="mt-10">Заказ и доставка суш в Эстонии. Мы работаем уже 8 лет и у нас есть более 2000 постоянных клиентов. У нас самые вкусные суши по всей Эстонии. Приходите и убедитесь сами!</p>
+      </div>
+      <div class="py-10 footer-col footer-menu">
+        <ul class="pl-10">
+          <li><a href="#">Меню</a></li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Вакансии</a></li>
+          <li><a href="#">Условия</a></li>
+          <li><a href="#">Конфиденциальность</a></li>
+        </ul>
+      </div>
+      <div class="py-10 footer-col footer-contact">
+        <ul class="pl-10">
+          <li class="mb-10 location">
+            <div class="address flex items-center">
+              <i class="icon-location"></i>
+              <p class="ml-4">Hommiku 3, 80010, Pärnu, Eesti</p>
+            </div>
+            <a href="#" class="ml-9">Открыть на карте</a>
+          </li>
+          <li class="mb-10">
+            <a href="tel:+37255543030" class="flex items-center">
+              <i class="icon-phone"></i>
+              <span class="ml-4">+372 5554 3030</span>
+            </a>
+          </li>
+          <li class="mb-10">
+            <a href="mailto:tartu@sushiking.ee" class="flex items-center">
+              <i class="icon-email"></i>
+              <span class="ml-4">tartu@sushiking.ee</span>
+            </a>
+          </li>
+          <li class="flex items-center">
+            <i class="icon-clock"></i>
+            <div class="hours ml-4">
+              <p>Пн-Пт : 11-21</p>
+              <p>Сб-Вс : 11-22</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom py-5">
+      <div class="container flex">
+        <p>© All rights reserved by «SushiKing» 2021</p>
+        <div class="social flex ml-auto">
+          <a href="#"><i class="icon-instagram"></i></a>
+          <a href="#" class="ml-5"><i class="icon-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

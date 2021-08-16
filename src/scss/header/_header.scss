@@ -1,0 +1,320 @@
+.header {
+  position: relative;
+  @include sm-block() {
+    display: flex;
+    flex-direction: column;
+  }
+  &.open {
+    .mobile-none {
+      padding: 15px 0 10px;
+      height: auto;
+      opacity: 1;
+      overflow: visible;
+    }
+    .icon-burger {
+      display: none;
+    }
+    .icon-close {
+      @include sm-block() {
+        display: block;
+      }
+    }
+  }
+  &-top {
+    background-color: $white-light;
+    font-family: $sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    position: relative;
+    @include xl-block() {
+      font-size: 16px;
+    }
+    @include sm-block() {
+      order: 2;
+    }
+    &.mobile-none {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all $easing 0.5s;
+      padding: 0;
+      @include sm-block() {
+        .header-top_languages {
+          order: 1;
+        }
+        .header-top_city {
+          order: 2;
+        }
+        .header-top_hours {
+          display: flex;
+          order: 3;
+          width: 100%;
+          padding: 20px 0 12px;
+          margin-top: 12px;
+          border-top: 1px solid $c-border;
+        }
+        .header-top_email {
+          order: 4;
+          width: 100%;
+          padding-bottom: 12px;
+        }
+        .header-top_phone {
+          order: 5;
+          width: 100%;
+          padding-bottom: 12px;
+        }
+        .burger-menu {
+          display: none;
+        }
+      }
+    }
+    &_city {
+      // min-width: 300px;
+      @include xl-block() {
+        // min-width: 250px;
+      }
+      @include sm-block() {
+        min-width: inherit;
+      }
+    }
+    .icon-lang {
+      border: 2px solid $gray;
+      cursor: pointer;
+      &.active {
+        border: 2px solid $accent;
+      }
+    }
+    .select-city {
+      .city-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 30;
+      }
+      &_name {
+        border: 1px solid $gray-light;
+        box-sizing: border-box;
+        border-radius: 5px;
+        cursor: pointer;
+        i {
+          position: absolute;
+          top: 55%;
+          right: 10px;
+          transform: translateY(-50%);
+          font-size: 8px;
+          &::before {
+            color: $gray;
+          }
+        }
+      }
+      &_options {
+        max-height: 300px;
+        width: fit-content;
+        width: -moz-fit-content;
+        overflow-y: auto;
+        border: 1px solid $gray-light;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: $white;
+        position: absolute;
+        top: 105%;
+        right: 0;
+        z-index: 100;
+        .city_option {
+          cursor: pointer;
+          white-space: nowrap;
+          &:hover {
+            background-color: $gray-light;
+          }
+        }
+      }
+    }
+    .burger-menu {
+      padding: 11px;
+      border-radius: 5px;
+      cursor: pointer;
+      i {
+        &::before {
+          color: $white;
+        }
+      }
+      .icon-close {
+        display: none;
+      }
+      &.open {
+        .icon-close {
+          display: block;
+        }
+        .icon-burger {
+          display: none;
+        }
+      }
+    }
+    .mobile-menu {
+      width: 100%;
+      margin-top: 15px;
+      padding: 20px 0 10px;
+      height: auto;
+      transition: all $easing 0.5s;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 58px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $gray-light;
+      }
+      &.none {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+  &-logo {
+    @include xs-block() {
+      width: 100px;
+    }
+    a {
+      display: inline-block;
+    }
+  }
+  &-nav {
+    background-image: url('../img/header-bg.jpg');
+    background-repeat: repeat;
+    position: relative;
+    z-index: 2;
+    @include sm-block() {
+      order: 1;
+    }
+    .nav {
+      @include sm-block() {
+        display: none;
+      }
+      li {
+        &.nav-menu {
+          position: relative;
+          &:hover {
+            .submenu {
+              display: block;
+            }
+          }
+        }
+        a {
+          padding: 0 20px;
+          display: flex;
+          align-items: center;
+          font-family: $sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 100%;
+          color: $white;
+          @include xl-block() {
+            font-size: 18px;
+          }
+          @include xl-block() {
+            font-size: 16px;
+            padding: 0 15px;
+          }
+          i {
+            font-size: 8px;
+          }
+        }
+        ul {
+          display: none;
+          max-height: 680px;
+          width: fit-content;
+          width: -moz-fit-content;
+          overflow-y: auto;
+          border: 1px solid $gray-light;
+          box-sizing: border-box;
+          border-radius: 5px;
+          background-color: $white;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          z-index: 100;
+          li {
+            &:hover {
+              background-color: $gray-light;
+            }
+            a {
+              width: 100%;
+              color: $black;
+              cursor: pointer;
+              white-space: nowrap;
+              display: inline-block;
+              padding: 10px;
+            }
+          }
+        }
+      }
+    }
+    .header-top_phone {
+      display: none;
+      a {
+        color: $white;
+      }
+      @include sm-block() {
+        display: block;
+      }
+      @include xs-block() {
+        display: none;
+      }
+    }
+  }
+  &-btn {
+    @include sm-block() {
+      display: flex;
+      align-items: center;
+    }
+    &_cart {
+      a {
+        color: $white;
+      }
+    }
+    a {
+      display: inline-block;
+      font-family: $lato;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 100%;
+      cursor: pointer;
+      @include sm-block() {
+        font-size: 16px;
+        padding: 12px 10px;
+      }
+    }
+    .icon-burger {
+      display: none;
+      padding: 10px;
+      margin-right: -10px;
+      margin-left: 10px;
+      @include sm-block() {
+        display: block;
+      }
+      &::before {
+        color: $white;
+      }
+    }
+    .icon-close {
+      display: none;
+      padding: 10px;
+      margin-right: -10px;
+      margin-left: 10px;
+      font-size: 20px;
+      &::before {
+        color: $white;
+      }
+    }
+  }
+}

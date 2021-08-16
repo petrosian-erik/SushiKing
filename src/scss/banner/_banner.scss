@@ -1,0 +1,88 @@
+.banner {
+  position: relative;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 12.92%, rgba(0, 0, 0, 0) 86.51%), url("../img/banner/baner-bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 715px;
+  overflow: hidden;
+  .container {
+    @include xl-block() {
+      padding-left: 60px;
+    }
+    @include l-block() {
+      text-align: center;
+      padding-left: 20px;
+    }
+  }
+  &-code {
+    @include l-block() {
+      margin: 0 auto;
+    }
+  }
+  &-btn {
+    justify-content: space-between;
+    a {
+      background-color: $white;
+      border: 1px solid #000000;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 6px 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      img {
+        width: 23px;
+        height: 25px;
+      }
+    }
+    .icon-get {
+      font-size: 8px;
+      display: block;
+    }
+    .icon-google-text {
+      margin-top: 2px;
+      font-size: 18px;
+      display: block;
+    }
+    .icon-apple {
+      font-size: 21px;
+    }
+    .icon-download {
+      font-size: 7px;
+      display: block;
+    }
+    .icon-store {
+      font-size: 17px;
+      display: block;
+      margin-top: 2px;
+    }
+  }
+  &-subtitle {
+    color: $white;
+    padding: 6px;
+  }
+  &-title {
+    h3 {
+      font-family: $oswald;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 56px;
+      line-height: 120%;
+      color: $white;
+      @include sm-block() {
+        font-size: 36px;
+      }
+    }
+  }
+  &-phone {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 652px;
+    max-height: 652px;
+    @include xl-block() {
+      right: -60px;
+    }
+  }
+}
